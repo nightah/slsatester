@@ -25,7 +25,7 @@ jobs:
         env:
           ORG: authelia
           PIPELINE: authelia
-          COMMIT: 5d90442e07cc695c61036ac1a539c0b942ebc71d
+          COMMIT: 6446c817ce4189d7e22974894132062ce2501be5
           BUILDKITE_TOKEN: ${{ secrets.BUILDKITE_TOKEN }}
         # yamllint disable rule:indentation
         run: |
@@ -68,7 +68,7 @@ jobs:
       actions: read
       id-token: write
       contents: write
-    uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@f7dd8c54c2067bafc12ca7a55595d5ee9b75204a
+    uses: slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@f7dd8c54c2067bafc12ca7a55595d5ee9b75204a  # v2.1.0
     with:
       base64-subjects: "${{ needs.buildkite.outputs.hashes }}"
       compile-generator: true
